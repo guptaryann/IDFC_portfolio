@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Segmentation | IDFC Case Study</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Inter', -apple-system, sans-serif; line-height: 1.6; background: #0a0f1a; color: #e5e7eb; }
+    a { text-decoration: none; color: inherit; }
+
+    .nav-bar { display: flex; align-items: center; justify-content: space-between; padding: 20px 40px; background: rgba(10,15,26,0.95); border-bottom: 1px solid rgba(255,255,255,0.1); position: sticky; top: 0; z-index: 100; backdrop-filter: blur(10px); }
+    .nav-back { color: #9ca3af; font-size: 14px; transition: color 0.2s; }
+    .nav-back:hover { color: white; }
+    .nav-title { font-size: 14px; color: #9ca3af; }
+
+    .page-container { max-width: 860px; margin: 0 auto; padding: 60px 40px; }
+    .page-header { margin-bottom: 40px; }
+    .page-number { display: inline-block; font-size: 13px; font-weight: 700; color: #6366f1; margin-bottom: 12px; letter-spacing: 2px; background: rgba(99,102,241,0.15); padding: 4px 10px; border-radius: 4px; }
+    .page-header h1 { font-size: 36px; font-weight: 700; margin-bottom: 8px; }
+    .page-subtitle { color: #9ca3af; }
+
+    .segment-grid { display: grid; gap: 20px; }
+    .segment-card { background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.1); border-radius: 14px; padding: 30px; transition: transform 0.2s; }
+    .segment-card:hover { transform: translateY(-3px); }
+    .segment-card.high { border-left: 4px solid #22c55e; }
+    .segment-card.medium { border-left: 4px solid #f59e0b; }
+    .segment-card.low { border-left: 4px solid #ef4444; }
+
+    .segment-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 16px; }
+    .segment-icon { font-size: 26px; }
+    .segment-badge { font-size: 11px; text-transform: uppercase; letter-spacing: 1px; padding: 4px 12px; border-radius: 20px; background: rgba(255,255,255,0.08); color: #9ca3af; }
+    .segment-card h3 { font-size: 20px; font-weight: 600; margin-bottom: 16px; }
+
+    .segment-stats { display: flex; gap: 40px; margin: 0 0 16px 0; padding: 20px; background: rgba(255,255,255,0.03); border-radius: 10px; }
+    .stat { text-align: center; }
+    .stat-label { display: block; font-size: 12px; color: #6b7280; margin-bottom: 6px; }
+    .stat-value { font-size: 28px; font-weight: 700; color: #6366f1; }
+    .segment-card p { font-size: 14px; color: #9ca3af; line-height: 1.6; }
+
+    .insight-card { background: rgba(99,102,241,0.1); border-left: 4px solid #6366f1; border-radius: 8px; padding: 24px; margin: 32px 0; }
+    .insight-card h4 { margin-bottom: 8px; font-size: 12px; text-transform: uppercase; letter-spacing: 2px; color: #9ca3af; }
+    .insight-card p { font-size: 16px; }
+
+    .page-nav { display: flex; justify-content: space-between; margin-top: 60px; padding-top: 24px; border-top: 1px solid rgba(255,255,255,0.1); }
+    .nav-link { padding: 12px 24px; border-radius: 8px; font-size: 14px; transition: all 0.2s ease; color: #9ca3af; }
+    .nav-link:hover { color: white; background: rgba(255,255,255,0.05); }
+    .nav-link.primary { background: #6366f1; color: white; }
+    .nav-link.primary:hover { background: #4f46e5; }
+
+    @media (max-width: 768px) {
+      .page-container { padding: 40px 20px; }
+      .nav-bar { padding: 16px 20px; }
+      .segment-stats { flex-direction: column; gap: 16px; }
+    }
+  </style>
+</head>
+<body>
+  <nav class="nav-bar">
+    <a href="case-study.html" class="nav-back">← Back to Overview</a>
+    <span class="nav-title">04 · Segmentation</span>
+  </nav>
+  <div class="page-container">
+    <header class="page-header">
+      <span class="page-number">04</span>
+      <h1>Customer Segmentation</h1>
+      <p class="page-subtitle">Cluster-based behavior analysis across KYC drop-off patterns</p>
+    </header>
+
+    <div class="segment-grid">
+      <div class="segment-card high">
+        <div class="segment-header">
+          <span class="segment-icon">🏙️</span>
+          <span class="segment-badge">High Completion</span>
+        </div>
+        <h3>Tier 1 Salaried Users</h3>
+        <div class="segment-stats">
+          <div class="stat">
+            <span class="stat-label">KYC Completion</span>
+            <span class="stat-value" style="color:#22c55e;">72%</span>
+          </div>
+          <div class="stat">
+            <span class="stat-label">Avg. Time</span>
+            <span class="stat-value" style="color:#22c55e;">4.2 min</span>
+          </div>
+          <div class="stat">
+            <span class="stat-label">% of Drop-offs</span>
+            <span class="stat-value" style="color:#22c55e;">12%</span>
+          </div>
+        </div>
+        <p>Metro users with stable income, high digital literacy, and prior banking experience. These users have clear mental models for KYC. Marginal UX improvements yield outsized gains here.</p>
+      </div>
+
+      <div class="segment-card medium">
+        <div class="segment-header">
+          <span class="segment-icon">🏘️</span>
+          <span class="segment-badge">Medium Completion</span>
+        </div>
+        <h3>Tier 2/3 City Users</h3>
+        <div class="segment-stats">
+          <div class="stat">
+            <span class="stat-label">KYC Completion</span>
+            <span class="stat-value" style="color:#f59e0b;">38%</span>
+          </div>
+          <div class="stat">
+            <span class="stat-label">Avg. Time</span>
+            <span class="stat-value" style="color:#f59e0b;">8.7 min</span>
+          </div>
+          <div class="stat">
+            <span class="stat-label">% of Drop-offs</span>
+            <span class="stat-value" style="color:#f59e0b;">35%</span>
+          </div>
+        </div>
+        <p>Emerging market users with moderate digital comfort. Experience higher document confusion and longer hesitation before video KYC. Guided flows and vernacular support can double conversion.</p>
+      </div>
+
+      <div class="segment-card low">
+        <div class="segment-header">
+          <span class="segment-icon">📱</span>
+          <span class="segment-badge">High Drop-off</span>
+        </div>
+        <h3>First-time Digital Users</h3>
+        <div class="segment-stats">
+          <div class="stat">
+            <span class="stat-label">KYC Completion</span>
+            <span class="stat-value" style="color:#ef4444;">18%</span>
+          </div>
+          <div class="stat">
+            <span class="stat-label">Avg. Time</span>
+            <span class="stat-value" style="color:#ef4444;">12+ min</span>
+          </div>
+          <div class="stat">
+            <span class="stat-label">% of Drop-offs</span>
+            <span class="stat-value" style="color:#ef4444;">53%</span>
+          </div>
+        </div>
+        <p>New-to-digital users with high trust anxiety and technical friction. This segment represents the largest growth opportunity — India's 300M+ new internet users are entering this cohort every year.</p>
+      </div>
+    </div>
+
+    <div class="insight-card">
+      <h4>Strategic Insight</h4>
+      <p>Tier 2/3 and first-time digital users represent <strong>65% of drop-offs</strong> but also the <strong>largest growth opportunity</strong>. Targeted UX interventions — step-by-step flows, live agent support, vernacular prompts — can unlock significant conversion gains in these underserved segments.</p>
+    </div>
+
+    <div class="page-nav">
+      <a href="data.html" class="nav-link">← Data</a>
+      <a href="rfm.html" class="nav-link primary">RFM Analysis →</a>
+    </div>
+  </div>
+</body>
+</html>

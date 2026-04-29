@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Problem Statement | IDFC Case Study</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Inter', -apple-system, sans-serif; line-height: 1.6; background: #0a0f1a; color: #e5e7eb; }
+    a { text-decoration: none; color: inherit; }
+
+    .nav-bar { display: flex; align-items: center; justify-content: space-between; padding: 20px 40px; background: rgba(10,15,26,0.95); border-bottom: 1px solid rgba(255,255,255,0.1); position: sticky; top: 0; z-index: 100; backdrop-filter: blur(10px); }
+    .nav-back { color: #9ca3af; font-size: 14px; transition: color 0.2s; }
+    .nav-back:hover { color: white; }
+    .nav-title { font-size: 14px; color: #9ca3af; }
+
+    .page-container { max-width: 860px; margin: 0 auto; padding: 60px 40px; }
+    .page-header { margin-bottom: 40px; }
+    .page-number { display: inline-block; font-size: 13px; font-weight: 700; color: #6366f1; margin-bottom: 12px; letter-spacing: 2px; background: rgba(99,102,241,0.15); padding: 4px 10px; border-radius: 4px; }
+    .page-header h1 { font-size: 36px; font-weight: 700; margin-bottom: 8px; }
+
+    .content-block { margin-bottom: 32px; }
+    .content-block p { margin-bottom: 16px; font-size: 17px; }
+    .lead-text { font-size: 20px !important; color: #d1d5db; line-height: 1.7; }
+    .highlight-text { font-size: 26px !important; font-weight: 700; color: #ef4444; line-height: 1.4; }
+
+    .insight-card { background: rgba(99,102,241,0.1); border-left: 4px solid #6366f1; border-radius: 8px; padding: 24px; margin: 32px 0; }
+    .insight-card.red { background: rgba(239,68,68,0.1); border-left-color: #ef4444; }
+    .insight-card h4 { margin-bottom: 8px; font-size: 12px; text-transform: uppercase; letter-spacing: 2px; color: #9ca3af; }
+    .insight-card p { font-size: 16px; color: #d1d5db; }
+
+    .stat-highlight { display: flex; gap: 48px; margin: 48px 0; flex-wrap: wrap; justify-content: center; background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.08); border-radius: 16px; padding: 40px; }
+    .stat-item { text-align: center; }
+    .stat-value { display: block; font-size: 52px; font-weight: 700; color: #ef4444; line-height: 1; margin-bottom: 8px; }
+    .stat-label { font-size: 14px; color: #9ca3af; }
+
+    .page-nav { display: flex; justify-content: space-between; margin-top: 60px; padding-top: 24px; border-top: 1px solid rgba(255,255,255,0.1); }
+    .nav-link { padding: 12px 24px; border-radius: 8px; font-size: 14px; transition: all 0.2s ease; color: #9ca3af; }
+    .nav-link:hover { color: white; background: rgba(255,255,255,0.05); }
+    .nav-link.primary { background: #6366f1; color: white; }
+    .nav-link.primary:hover { background: #4f46e5; }
+
+    @media (max-width: 768px) {
+      .page-container { padding: 40px 20px; }
+      .nav-bar { padding: 16px 20px; }
+      .stat-highlight { flex-direction: column; align-items: center; gap: 32px; }
+    }
+  </style>
+</head>
+<body>
+  <nav class="nav-bar">
+    <a href="case-study.html" class="nav-back">← Back to Overview</a>
+    <span class="nav-title">01 · Problem Statement</span>
+  </nav>
+  <div class="page-container">
+    <header class="page-header">
+      <span class="page-number">01</span>
+      <h1>The Invisible Barrier</h1>
+    </header>
+
+    <div class="content-block">
+      <p class="lead-text">Every day, thousands of potential IDFC FIRST Bank customers begin the digital account opening journey — drawn in by competitive rates, zero-fee promises, and app-store buzz.</p>
+      <p>They navigate awareness campaigns, explore products, and hit "Open Account."</p>
+      <p class="highlight-text">Then they hit KYC. And they leave.</p>
+    </div>
+
+    <div class="insight-card red">
+      <h4>The Reality</h4>
+      <p>This isn't just an ops problem. It's a revenue haemorrhage, a brand trust signal, and a gift to every competitor with a smoother onboarding experience.</p>
+    </div>
+
+    <div class="stat-highlight">
+      <div class="stat-item">
+        <span class="stat-value">68%</span>
+        <span class="stat-label">Drop-off at KYC stage</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-value">₹12–15Cr</span>
+        <span class="stat-label">Annual revenue impact per 1% recovery</span>
+      </div>
+    </div>
+
+    <div class="content-block">
+      <p>The KYC drop-off isn't a fringe event — it is the <strong>single largest conversion failure point</strong> in the entire digital acquisition funnel. Every percentage point recovered here directly compounds into deposits, cross-sells, and lifetime value.</p>
+      <p>The question isn't whether to fix it. The question is: where exactly does trust break down — and how do we rebuild it before the user closes the app?</p>
+    </div>
+
+    <div class="insight-card">
+      <h4>Framing the Challenge</h4>
+      <p>We need to understand <strong>who</strong> is dropping off, <strong>where</strong> in the KYC flow it happens, <strong>why</strong> they abandon, and <strong>what</strong> product interventions can close that gap at scale.</p>
+    </div>
+
+    <div class="page-nav">
+      <a href="case-study.html" class="nav-link">← Overview</a>
+      <a href="journey.html" class="nav-link primary">User Journey →</a>
+    </div>
+  </div>
+</body>
+</html>

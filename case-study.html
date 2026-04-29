@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IDFC Case Study | Aryan Gupta</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Inter', -apple-system, sans-serif; line-height: 1.6; background: #0a0f1a; color: #e5e7eb; }
+    a { text-decoration: none; color: inherit; }
+
+    .nav-bar { display: flex; align-items: center; justify-content: space-between; padding: 20px 40px; background: rgba(10,15,26,0.95); border-bottom: 1px solid rgba(255,255,255,0.1); position: sticky; top: 0; z-index: 100; backdrop-filter: blur(10px); }
+    .nav-logo { font-weight: 700; font-size: 20px; color: #6366f1; }
+    .nav-title { font-size: 14px; color: #9ca3af; }
+
+    .case-container { max-width: 1100px; margin: 0 auto; padding: 60px 40px; }
+    .case-header { text-align: center; margin-bottom: 64px; }
+    .case-label { font-size: 13px; text-transform: uppercase; letter-spacing: 3px; color: #6366f1; margin-bottom: 16px; }
+    .case-header h1 { font-size: 38px; font-weight: 700; margin-bottom: 12px; }
+    .case-subtitle { color: #9ca3af; font-size: 16px; }
+
+    .section-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
+    .section-card { background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.09); border-radius: 14px; padding: 30px; transition: all 0.3s ease; display: block; }
+    .section-card:hover { background: rgba(99,102,241,0.1); border-color: #6366f1; transform: translateY(-5px); box-shadow: 0 12px 32px rgba(99,102,241,0.15); }
+    .section-number { display: inline-block; font-size: 11px; font-weight: 700; color: #6366f1; letter-spacing: 2px; margin-bottom: 14px; background: rgba(99,102,241,0.15); padding: 4px 10px; border-radius: 4px; }
+    .section-card h3 { font-size: 18px; margin-bottom: 8px; }
+    .section-card p { font-size: 14px; color: #9ca3af; }
+    .card-arrow { display: block; margin-top: 20px; color: #6366f1; font-size: 20px; opacity: 0; transition: opacity 0.3s, transform 0.3s; transform: translateX(-6px); }
+    .section-card:hover .card-arrow { opacity: 1; transform: translateX(0); }
+
+    @media (max-width: 768px) {
+      .case-container { padding: 40px 20px; }
+      .nav-bar { padding: 16px 20px; }
+    }
+  </style>
+</head>
+<body>
+  <nav class="nav-bar">
+    <a href="index.html" class="nav-logo">AG</a>
+    <span class="nav-title">IDFC FIRST Bank Case Study</span>
+  </nav>
+  <div class="case-container">
+    <header class="case-header">
+      <p class="case-label">Product &amp; Analytics Case Study</p>
+      <h1>Improving Digital Account Opening Journey</h1>
+      <p class="case-subtitle">IDFC FIRST Bank · KYC Drop-off Analysis &amp; Solutions</p>
+    </header>
+    <div class="section-grid">
+      <a href="problem.html" class="section-card">
+        <span class="section-number">01</span>
+        <h3>Problem Statement</h3>
+        <p>The invisible barrier costing millions</p>
+        <span class="card-arrow">→</span>
+      </a>
+      <a href="journey.html" class="section-card">
+        <span class="section-number">02</span>
+        <h3>User Journey</h3>
+        <p>CDP Framework mapping &amp; drop-off analysis</p>
+        <span class="card-arrow">→</span>
+      </a>
+      <a href="data.html" class="section-card">
+        <span class="section-number">03</span>
+        <h3>Data Visualization</h3>
+        <p>Funnel metrics &amp; conversion analysis</p>
+        <span class="card-arrow">→</span>
+      </a>
+      <a href="segmentation.html" class="section-card">
+        <span class="section-number">04</span>
+        <h3>Segmentation Insight</h3>
+        <p>Customer cluster analysis</p>
+        <span class="card-arrow">→</span>
+      </a>
+      <a href="rfm.html" class="section-card">
+        <span class="section-number">05</span>
+        <h3>RFM Analysis</h3>
+        <p>Behavioral value framework</p>
+        <span class="card-arrow">→</span>
+      </a>
+      <a href="solutions.html" class="section-card">
+        <span class="section-number">06</span>
+        <h3>Solutions</h3>
+        <p>UX &amp; product recommendations</p>
+        <span class="card-arrow">→</span>
+      </a>
+      <a href="experimentation.html" class="section-card">
+        <span class="section-number">07</span>
+        <h3>Experimentation</h3>
+        <p>A/B testing framework</p>
+        <span class="card-arrow">→</span>
+      </a>
+      <a href="impact.html" class="section-card">
+        <span class="section-number">08</span>
+        <h3>Business Impact</h3>
+        <p>CLV &amp; revenue implications</p>
+        <span class="card-arrow">→</span>
+      </a>
+      <a href="voc.html" class="section-card" style="border-color: rgba(99,102,241,0.4); background: rgba(99,102,241,0.06);">
+        <span class="section-number" style="background: rgba(99,102,241,0.25); color: #818cf8;">09 · NEW</span>
+        <h3>Voice of Customer</h3>
+        <p>Automated AI pipeline · Live dashboard · Real scraped reviews</p>
+        <span class="card-arrow">→</span>
+      </a>
+    </div>
+  </div>
+</body>
+</html>

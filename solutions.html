@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Solutions | IDFC Case Study</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Inter', -apple-system, sans-serif; line-height: 1.6; background: #0a0f1a; color: #e5e7eb; }
+    a { text-decoration: none; color: inherit; }
+
+    .nav-bar { display: flex; align-items: center; justify-content: space-between; padding: 20px 40px; background: rgba(10,15,26,0.95); border-bottom: 1px solid rgba(255,255,255,0.1); position: sticky; top: 0; z-index: 100; backdrop-filter: blur(10px); }
+    .nav-back { color: #9ca3af; font-size: 14px; transition: color 0.2s; }
+    .nav-back:hover { color: white; }
+    .nav-title { font-size: 14px; color: #9ca3af; }
+
+    .page-container { max-width: 860px; margin: 0 auto; padding: 60px 40px; }
+    .page-header { margin-bottom: 40px; }
+    .page-number { display: inline-block; font-size: 13px; font-weight: 700; color: #6366f1; margin-bottom: 12px; letter-spacing: 2px; background: rgba(99,102,241,0.15); padding: 4px 10px; border-radius: 4px; }
+    .page-header h1 { font-size: 36px; font-weight: 700; margin-bottom: 8px; }
+    .page-subtitle { color: #9ca3af; }
+
+    .solutions-list { display: flex; flex-direction: column; gap: 16px; }
+    .solution-card { display: flex; gap: 20px; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.09); border-radius: 14px; padding: 28px; transition: all 0.3s ease; align-items: flex-start; }
+    .solution-card:hover { border-color: #6366f1; transform: translateX(6px); background: rgba(99,102,241,0.05); }
+
+    .solution-left { display: flex; flex-direction: column; align-items: center; gap: 8px; flex-shrink: 0; }
+    .solution-number { font-size: 12px; font-weight: 700; color: #6366f1; width: 36px; height: 36px; border-radius: 8px; background: rgba(99,102,241,0.15); display: flex; align-items: center; justify-content: center; }
+    .solution-icon { font-size: 22px; }
+
+    .solution-content h3 { margin-bottom: 8px; font-size: 17px; font-weight: 600; }
+    .solution-content p { font-size: 14px; color: #9ca3af; margin-bottom: 14px; line-height: 1.6; }
+    .solution-impact { display: inline-block; font-size: 12px; padding: 4px 14px; background: rgba(34,197,94,0.12); color: #22c55e; border-radius: 20px; border: 1px solid rgba(34,197,94,0.2); font-weight: 600; }
+
+    .priority-note { background: rgba(99,102,241,0.08); border: 1px solid rgba(99,102,241,0.2); border-radius: 12px; padding: 20px 24px; margin: 32px 0; display: flex; gap: 16px; align-items: flex-start; }
+    .priority-note-icon { font-size: 22px; flex-shrink: 0; }
+    .priority-note p { font-size: 15px; color: #d1d5db; }
+
+    .page-nav { display: flex; justify-content: space-between; margin-top: 60px; padding-top: 24px; border-top: 1px solid rgba(255,255,255,0.1); }
+    .nav-link { padding: 12px 24px; border-radius: 8px; font-size: 14px; transition: all 0.2s ease; color: #9ca3af; }
+    .nav-link:hover { color: white; background: rgba(255,255,255,0.05); }
+    .nav-link.primary { background: #6366f1; color: white; }
+    .nav-link.primary:hover { background: #4f46e5; }
+
+    @media (max-width: 768px) {
+      .page-container { padding: 40px 20px; }
+      .nav-bar { padding: 16px 20px; }
+    }
+  </style>
+</head>
+<body>
+  <nav class="nav-bar">
+    <a href="case-study.html" class="nav-back">← Back to Overview</a>
+    <span class="nav-title">06 · Solutions</span>
+  </nav>
+  <div class="page-container">
+    <header class="page-header">
+      <span class="page-number">06</span>
+      <h1>Proposed Solutions</h1>
+      <p class="page-subtitle">UX &amp; product interventions ranked by expected drop-off reduction</p>
+    </header>
+
+    <div class="priority-note">
+      <span class="priority-note-icon">🎯</span>
+      <p>Solutions are ordered by estimated impact. Each addresses a specific root cause identified in the journey analysis. Ideal rollout: implement 01–03 in sprint 1, 04–06 in sprint 2, then measure via A/B testing.</p>
+    </div>
+
+    <div class="solutions-list">
+      <div class="solution-card">
+        <div class="solution-left">
+          <div class="solution-number">01</div>
+          <span class="solution-icon">🪜</span>
+        </div>
+        <div class="solution-content">
+          <h3>Guided Step-by-Step KYC</h3>
+          <p>Break the KYC process into 3 digestible micro-steps with a clear progress indicator ("Step 2 of 3"). Reduce cognitive load by showing only what's needed per step. Eliminates the "wall of form" effect.</p>
+          <span class="solution-impact">Expected Impact: −15% overall drop-off</span>
+        </div>
+      </div>
+
+      <div class="solution-card">
+        <div class="solution-left">
+          <div class="solution-number">02</div>
+          <span class="solution-icon">💾</span>
+        </div>
+        <div class="solution-content">
+          <h3>Save &amp; Resume via Deep Link</h3>
+          <p>Allow users to save progress mid-KYC and return via a unique SMS/email deep link without restarting. Crucial for Tier 2/3 users with intermittent connectivity or who need to gather documents.</p>
+          <span class="solution-impact">Expected Impact: −30% permanent abandonment</span>
+        </div>
+      </div>
+
+      <div class="solution-card">
+        <div class="solution-left">
+          <div class="solution-number">03</div>
+          <span class="solution-icon">✅</span>
+        </div>
+        <div class="solution-content">
+          <h3>Real-time Document Validation</h3>
+          <p>Instant feedback on document quality — blur detection, wrong document type, poor lighting — before submission. Show example "good" images. Reduces backend rejection and the frustration of restarting.</p>
+          <span class="solution-impact">Expected Impact: −40% document errors, −25% retries</span>
+        </div>
+      </div>
+
+      <div class="solution-card">
+        <div class="solution-left">
+          <div class="solution-number">04</div>
+          <span class="solution-icon">🎥</span>
+        </div>
+        <div class="solution-content">
+          <h3>Video KYC — Live Agent Assist</h3>
+          <p>Offer live agent support during video verification for users who encounter technical difficulties. Especially effective for first-time digital users who need reassurance and guidance in real time.</p>
+          <span class="solution-impact">Expected Impact: −20% drop-off for Tier 2/3 segment</span>
+        </div>
+      </div>
+
+      <div class="solution-card">
+        <div class="solution-left">
+          <div class="solution-number">05</div>
+          <span class="solution-icon">🛡️</span>
+        </div>
+        <div class="solution-content">
+          <h3>Trust Signals &amp; Security Indicators</h3>
+          <p>Display RBI compliance badges, end-to-end encryption indicators, and data security assurances prominently at the KYC entry point and alongside document upload fields. Addresses the #3 drop-off reason.</p>
+          <span class="solution-impact">Expected Impact: +18% trust score, −12% exit intent</span>
+        </div>
+      </div>
+
+      <div class="solution-card">
+        <div class="solution-left">
+          <div class="solution-number">06</div>
+          <span class="solution-icon">📋</span>
+        </div>
+        <div class="solution-content">
+          <h3>Pre-KYC Document Checklist</h3>
+          <p>Show users exactly which documents they'll need — with example images — before entering the KYC flow. A "Prepare in 2 minutes" screen reduces mid-flow abandonment due to missing documents.</p>
+          <span class="solution-impact">Expected Impact: −35% mid-flow exits</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="page-nav">
+      <a href="rfm.html" class="nav-link">← RFM</a>
+      <a href="experimentation.html" class="nav-link primary">Experimentation →</a>
+    </div>
+  </div>
+</body>
+</html>
